@@ -3,6 +3,7 @@
 	<name>Hotel Management System</name>
 	<comment></comment>
 	<projects>
+		<project>mysql-connector-java</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
