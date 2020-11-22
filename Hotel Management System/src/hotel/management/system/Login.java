@@ -10,7 +10,7 @@ public class Login extends JFrame implements ActionListener {
 	JLabel l1, l2; // labels
 	JTextField t1; // text field object
 	JPasswordField t2; // password field object
-	JButton b1, b2;
+	JButton b1, b2, b3;
 
 	Login() {
 
@@ -57,11 +57,21 @@ public class Login extends JFrame implements ActionListener {
 		add(b2);
 
 		b2.addActionListener(this);
+		
+		b3 = new JButton("Create");
+		b3.setBounds(420, 180, 120, 30);
+		b3.setFont(new Font("serif", Font.BOLD, 15));
+		b3.setBackground(Color.BLACK); // used from awt
+		b3.setForeground(Color.WHITE);
+		add(b3);
+
+		b3.addActionListener(this);
 
 		getContentPane().setBackground(Color.WHITE);
 
 		setLayout(null);
 		setBounds(600, 300, 600, 260);
+		setResizable(false);
 		setVisible(true);
 	}
 
@@ -87,6 +97,10 @@ public class Login extends JFrame implements ActionListener {
 			}
 		} else if (ae.getSource() == b2) {
 			System.exit(0);
+		}
+		
+		else if (ae.getSource() == b3) {
+			new UserRegistration().setVisible(true);
 		}
 
 	}

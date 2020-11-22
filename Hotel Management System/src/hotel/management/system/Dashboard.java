@@ -15,11 +15,11 @@ public class Dashboard extends JFrame {
 		mb = new JMenuBar();
 		add(mb);
 
-		m1 = new JMenu("HOTEL MANAGEMENT");
+		m1 = new JMenu("Hotel Management");
 		m1.setForeground(Color.RED);
 		mb.add(m1);
 
-		m2 = new JMenu("ADMIN");
+		m2 = new JMenu("Admin");
 		m2.setForeground(Color.BLUE);
 		mb.add(m2);
 
@@ -84,7 +84,8 @@ public class Dashboard extends JFrame {
 		l1.add(l2);
 
 		setLayout(null);
-		setBounds(0, 0, 1920, 1080);
+		setBounds(0, 0, 1920, 1050);
+		//setResizable(false);
 		setVisible(true);
 
 	}
