@@ -29,7 +29,7 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
 
 		JLabel lid = new JLabel("HOTEL MANAGEMENT SYSTEM");
 		lid.setBounds(30, 400, 1500, 100);
-		lid.setFont(new Font("serif", Font.PLAIN, 50));
+		lid.setFont(new Font("serif", Font.BOLD, 50));
 		lid.setForeground(Color.white);
 		l1.add(lid);
 
