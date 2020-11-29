@@ -114,23 +114,45 @@ public class CheckOut extends JFrame {
 		JButton btnCheckOut = new JButton("Check Out");
 		btnCheckOut.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String id = c1.getSelectedItem();
+				int pending = 1;
 				String s1 = t1.getText();
-				String deleteSQL = "Delete from customer where number = " + "'" + id + "'";
-				String q2 = "update room set available = 'Available' where room_number = " + s1;
-
+				String id = c1.getSelectedItem();
+				String total = "select price from room where room_number = '" + s1 + "'";
+				String deposit = "select deposit from customer where number = '" + id + "'";
 				conn c = new conn();
-
 				try {
-					// USER LEAVES THE HOTEL PULL A CHECK OUT TRY AND CATCH//
+					ResultSet rs1 = c.s.executeQuery("select * from customer where room = " + s1);
+					while (rs1.next()) {
+						deposit = rs1.getString("deposit");
 
-					c.s.executeUpdate(deleteSQL);
-					c.s.executeUpdate(q2);
-					JOptionPane.showMessageDialog(null, "Check Out Successful");
-					new Reception().setVisible(true);
-					setVisible(false);
+					}
+					ResultSet rs2 = c.s.executeQuery("select * from room where room_number = " + s1);
+					while (rs2.next()) {
+						total = rs2.getString("price");
+
+					}
+//					deposit = rs2.getString("deposit");
 				} catch (SQLException e1) {
 					System.out.println(e1.getMessage());
+				}
+				if (Integer.parseInt(total) == Integer.parseInt(deposit)) {
+
+					String deleteSQL = "Delete from customer where number = " + "'" + id + "'";
+					String q2 = "update room set available = 'Available' where room_number = " + s1;
+
+					try {
+						// USER LEAVES THE HOTEL PULL A CHECK OUT TRY AND CATCH//
+
+						c.s.executeUpdate(deleteSQL);
+						c.s.executeUpdate(q2);
+						JOptionPane.showMessageDialog(null, "Check Out Successful");
+						new Reception().setVisible(true);
+						setVisible(false);
+					} catch (SQLException e1) {
+						System.out.println(e1.getMessage());
+					}
+				} else {
+					JOptionPane.showMessageDialog(null, "Total money not deposted");
 				}
 			}
 		});// COLUMN DELETED SUCCESSFULLY//
