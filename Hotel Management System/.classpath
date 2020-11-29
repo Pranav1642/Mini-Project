@@ -11,11 +11,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="rs2xml.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/prana/Desktop/Mini-Project/rs2/rs2xml.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

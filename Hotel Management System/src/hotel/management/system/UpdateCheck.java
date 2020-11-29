@@ -126,11 +126,11 @@ public class UpdateCheck extends JFrame {
 					String s4 = txt_Date.getText(); // status;
 					String s5 = txt_Time.getText(); // deposit
 
-					c.s.executeUpdate("update customer set room_number = '" + s2 + "', name = '" + s3 + "', status = '"
-							+ s4 + "', deposit = '" + s5 + "' where number = '" + s1 + "'");
+					c.s.executeUpdate("update customer set room = '" + s2 + "', name = '" + s3 + "', status = '" + s4
+							+ "', deposit = '" + s5 + "' where number = '" + s1 + "'");
 
 					JOptionPane.showMessageDialog(null, "Data Updated Successfully");
-					// new Reception().setVisible(true);//
+					new Reception().setVisible(true);
 					setVisible(false);
 				} catch (Exception ee) {
 					System.out.println(ee);
@@ -146,7 +146,7 @@ public class UpdateCheck extends JFrame {
 		JButton btnExit = new JButton("Back");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// new Reception().setVisible(true);//
+				new Reception().setVisible(true);
 				setVisible(false);
 			}
 		});
@@ -161,10 +161,10 @@ public class UpdateCheck extends JFrame {
 				try {
 					String s1 = c1.getSelectedItem();
 					conn c = new conn();
-					ResultSet rs1 = c.s.executeQuery("select * from customer where number = " + s1);
+					ResultSet rs1 = c.s.executeQuery("select * from customer where number = " + "'" + s1 + "'");
 
 					while (rs1.next()) {
-						txt_ID.setText(rs1.getString("room_number"));
+						txt_ID.setText(rs1.getString("room"));
 						txt_Status.setText(rs1.getString("name"));
 						txt_Date.setText(rs1.getString("status"));
 						txt_Time.setText(rs1.getString("deposit"));

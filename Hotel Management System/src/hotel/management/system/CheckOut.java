@@ -92,11 +92,11 @@ public class CheckOut extends JFrame {
 					// CHECK WETHER NUMBER IS AVAILABLE IN DATABASE OR NOT RUN CATCH ELSE//
 					conn c = new conn();
 					String number = c1.getSelectedItem();
-					ResultSet rs = c.s.executeQuery("select * from customer where number = " + number);
+					ResultSet rs = c.s.executeQuery("select * from customer where number = " + "'" + number + "'");
 
 					if (rs.next()) {
 						System.out.println("clicked");
-						t1.setText(rs.getString("room_number"));
+						t1.setText(rs.getString("room"));
 					}
 				} catch (Exception e) {
 				}
@@ -116,8 +116,8 @@ public class CheckOut extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				String id = c1.getSelectedItem();
 				String s1 = t1.getText();
-				String deleteSQL = "Delete from customer where number = " + id;
-				String q2 = "update room set availability = 'Available' where room_number = " + s1;
+				String deleteSQL = "Delete from customer where number = " + "'" + id + "'";
+				String q2 = "update room set available = 'Available' where room_number = " + s1;
 
 				conn c = new conn();
 
@@ -127,7 +127,7 @@ public class CheckOut extends JFrame {
 					c.s.executeUpdate(deleteSQL);
 					c.s.executeUpdate(q2);
 					JOptionPane.showMessageDialog(null, "Check Out Successful");
-					// new Reception().setVisible(true);//
+					new Reception().setVisible(true);
 					setVisible(false);
 				} catch (SQLException e1) {
 					System.out.println(e1.getMessage());
@@ -142,7 +142,7 @@ public class CheckOut extends JFrame {
 		JButton btnExit = new JButton("Back");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// new Reception().setVisible(true);//
+				new Reception().setVisible(true);
 				setVisible(false);
 			}
 		});

@@ -18,7 +18,7 @@ public class NewCustomer extends JFrame {
 	JTextField t1, t2, t3, t4, t5, t6;
 	JComboBox comboBox;
 	JRadioButton r1, r2;
-	Choice c1;
+	Choice c1,c2;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -122,10 +122,18 @@ public class NewCustomer extends JFrame {
 		lblDeposite.setBounds(35, 359, 200, 14);
 		contentPane.add(lblDeposite);
 
-		t3 = new JTextField();
-		t3.setBounds(271, 231, 150, 20);
-		contentPane.add(t3);
-		t3.setColumns(10);
+		c2 = new Choice();
+		try {
+			conn c = new conn();
+			ResultSet rs = c.s.executeQuery("select * from country");// SQL PACKAGE//
+			while (rs.next()) {
+				c2.add(rs.getString("name"));
+			}
+		} catch (Exception e) {
+		}
+		c2.setBounds(271, 231, 150, 20);
+		contentPane.add(c2);
+
 
 		t5 = new JTextField();
 		t5.setBounds(271, 316, 150, 20);
@@ -150,6 +158,7 @@ public class NewCustomer extends JFrame {
 				}
 
 				String s6 = c1.getSelectedItem();
+				String s5 = c2.getSelectedItem();
 
 				try {
 
@@ -157,13 +166,13 @@ public class NewCustomer extends JFrame {
 					String s2 = t1.getText();
 					String s3 = t2.getText();
 					String s4 = radio;
-					String s5 = t3.getText();
+					//String s5 = t3.getText();
 					String s7 = t5.getText();
 					String s8 = t6.getText();
 
 					String q1 = "insert into customer values('" + s1 + "','" + s2 + "','" + s3 + "','" + s4 + "','" + s5
 							+ "','" + s6 + "','" + s7 + "','" + s8 + "')";
-					String q2 = "update room set availability = 'Occupied' where room_number = " + s6;
+					String q2 = "update room set available = 'Occupied' where room_number = " + s6;
 					c.s.executeUpdate(q1);
 					c.s.executeUpdate(q2);
 

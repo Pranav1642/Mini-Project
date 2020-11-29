@@ -95,7 +95,7 @@ public class PickUp extends JFrame {
 		JButton btnExit = new JButton("Back");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				// new Reception().setVisible(true);//
+				new Reception().setVisible(true);
 				setVisible(false);
 			}
 		});

@@ -57,7 +57,7 @@ public class Login extends JFrame implements ActionListener {
 		add(b2);
 
 		b2.addActionListener(this);
-		
+
 		b3 = new JButton("Create");
 		b3.setBounds(420, 180, 120, 30);
 		b3.setFont(new Font("serif", Font.BOLD, 15));
@@ -96,11 +96,18 @@ public class Login extends JFrame implements ActionListener {
 				e.printStackTrace();
 			}
 		} else if (ae.getSource() == b2) {
+			System.gc();
+			java.awt.Window win[] = java.awt.Window.getWindows();// checking for all open windows and closes all
+			for (int i = 0; i < win.length; i++) {
+				win[i].dispose();
+				win[i] = null;
+			}
 			System.exit(0);
 		}
-		
+
 		else if (ae.getSource() == b3) {
 			new UserRegistration().setVisible(true);
+			setVisible(false);
 		}
 
 	}
