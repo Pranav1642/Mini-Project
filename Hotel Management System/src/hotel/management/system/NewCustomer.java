@@ -93,6 +93,10 @@ public class NewCustomer extends JFrame {
 		r2.setBackground(Color.WHITE);
 		r2.setBounds(350, 191, 100, 12);
 		add(r2);
+		
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(r1);
+		bg.add(r2);
 
 		JLabel lblCountry = new JLabel("Country :");
 		lblCountry.setBounds(35, 231, 200, 14);

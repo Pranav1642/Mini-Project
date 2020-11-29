@@ -14,8 +14,11 @@ public class Reception extends JFrame {
 	}
 
 	public Reception() {
+		getContentPane().setForeground(Color.BLUE);
+		getContentPane().setBackground(Color.WHITE);
+		setTitle("Reception");
 
-		setBounds(250, 70, 850, 570);
+		setBounds(350, 150, 850, 570);
 		contentPane = new JPanel();
 		setContentPane(contentPane);
 		contentPane.setLayout(null);

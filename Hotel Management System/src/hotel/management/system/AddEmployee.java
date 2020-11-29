@@ -15,7 +15,7 @@ public class AddEmployee extends JFrame { // Third Frame
 	public AddEmployee() {
 		getContentPane().setForeground(Color.BLUE);
 		getContentPane().setBackground(Color.WHITE);
-		setTitle("ADD EMPLOYEE DETAILS");
+		setTitle("Add Employee Details");
 
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setSize(778, 486);

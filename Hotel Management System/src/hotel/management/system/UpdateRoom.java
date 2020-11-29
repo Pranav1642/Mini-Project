@@ -105,10 +105,10 @@ public class UpdateRoom extends JFrame {
 				try {
 					String s1 = c1.getSelectedItem();
 					conn c = new conn();
-					ResultSet rs1 = c.s.executeQuery("select * from customer where number = " + s1);
+					ResultSet rs1 = c.s.executeQuery("select * from customer where number = " + "'" + s1 + "'");
 					// Room available display status available//
 					while (rs1.next()) {
-						txt_Room.setText(rs1.getString("room_number"));
+						txt_Room.setText(rs1.getString("room"));
 					}
 				} catch (Exception ee) {
 				}
@@ -116,8 +116,8 @@ public class UpdateRoom extends JFrame {
 					conn c = new conn(); // Database connection//
 					ResultSet rs2 = c.s.executeQuery("select * from room where room_number = " + txt_Room.getText());
 					while (rs2.next()) {
-						txt_Ava.setText(rs2.getString("availability")); // If number matches//
-						txt_Status.setText(rs2.getString("clean_status"));
+						txt_Ava.setText(rs2.getString("available")); // If number matches//
+						txt_Status.setText(rs2.getString("status"));
 					}
 				} catch (Exception ee) {
 				}

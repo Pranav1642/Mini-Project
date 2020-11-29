@@ -98,6 +98,7 @@ public class UserRegistration extends JFrame {
 								"Welcome, " + msg + "Your account was created sucessfully");
 
 						setVisible(false);
+						new Login().setVisible(true);
 					}
 					connection.close();
 				} catch (Exception exception) {

@@ -111,17 +111,17 @@ public class SearchRoom extends JFrame {
 		btnSearch.setForeground(Color.WHITE);
 		contentPane.add(btnSearch);
 
-		JButton btnExit = new JButton("Back");
-		btnExit.addActionListener(new ActionListener() {
+		JButton back = new JButton("Back");
+		back.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Reception().setVisible(true);
 				setVisible(false);
 			}
 		});
-		btnExit.setBounds(380, 400, 120, 30);
-		btnExit.setBackground(Color.BLACK);
-		btnExit.setForeground(Color.WHITE);
-		contentPane.add(btnExit);
+		back.setBounds(380, 400, 120, 30);
+		back.setBackground(Color.BLACK);
+		back.setForeground(Color.WHITE);
+		contentPane.add(back);
 
 		table = new JTable();
 		table.setBounds(0, 187, 700, 300);
