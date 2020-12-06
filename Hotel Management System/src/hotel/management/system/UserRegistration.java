@@ -107,14 +107,14 @@ public class UserRegistration extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setFont(new Font("serif", Font.BOLD, 15));
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnNewButton.setBounds(40, 140, 120, 30);
 		btnNewButton.setBackground(Color.BLACK);
 		btnNewButton.setForeground(Color.WHITE);
 		contentPane.add(btnNewButton);
 		b2 = new JButton("Cancel");
 		b2.setBounds(180, 140, 120, 30);
-		b2.setFont(new Font("serif", Font.BOLD, 15));
+		b2.setFont(new Font("Tahoma", Font.BOLD, 15));
 		b2.setBackground(Color.BLACK); // used from awt
 		b2.setForeground(Color.WHITE);
 		b2.addActionListener(new ActionListener() {

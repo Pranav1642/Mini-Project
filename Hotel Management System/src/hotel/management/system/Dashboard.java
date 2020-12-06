@@ -74,13 +74,13 @@ public class Dashboard extends JFrame {
 		Image i2 = i1.getImage().getScaledInstance(1920, 1080, Image.SCALE_DEFAULT);
 		ImageIcon i3 = new ImageIcon(i2);
 		JLabel l1 = new JLabel(i3);
-		l1.setBounds(0, 0, 1920, 1080);
+		l1.setBounds(-300, 0, 1920, 1080);
 		add(l1);
 
 		JLabel l2 = new JLabel("Welcome to the Hotel Management System");
-		l2.setBounds(300, 60, 1000, 60);
-		l2.setForeground(Color.BLACK);
-		l2.setFont(new Font("Tahoma", Font.PLAIN, 50));
+		l2.setBounds(400, 60, 1100, 60);
+		l2.setForeground(Color.WHITE);
+		l2.setFont(new Font("SansSerif", Font.BOLD, 50));
 		l1.add(l2);
 
 		setLayout(null);

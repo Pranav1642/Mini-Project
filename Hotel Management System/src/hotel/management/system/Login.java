@@ -43,7 +43,7 @@ public class Login extends JFrame implements ActionListener {
 
 		b1 = new JButton("Login");
 		b1.setBounds(40, 140, 120, 30);
-		b1.setFont(new Font("serif", Font.BOLD, 15));
+		b1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		b1.addActionListener(this);
 		b1.setBackground(Color.BLACK);
 		b1.setForeground(Color.WHITE);
@@ -51,7 +51,7 @@ public class Login extends JFrame implements ActionListener {
 
 		b2 = new JButton("Cancel");
 		b2.setBounds(180, 140, 120, 30);
-		b2.setFont(new Font("serif", Font.BOLD, 15));
+		b2.setFont(new Font("Tahoma", Font.BOLD, 15));
 		b2.setBackground(Color.BLACK); // used from awt
 		b2.setForeground(Color.WHITE);
 		add(b2);
@@ -60,7 +60,7 @@ public class Login extends JFrame implements ActionListener {
 
 		b3 = new JButton("Create");
 		b3.setBounds(420, 180, 120, 30);
-		b3.setFont(new Font("serif", Font.BOLD, 15));
+		b3.setFont(new Font("Tahoma", Font.BOLD, 15));
 		b3.setBackground(Color.BLACK); // used from awt
 		b3.setForeground(Color.WHITE);
 		add(b3);
