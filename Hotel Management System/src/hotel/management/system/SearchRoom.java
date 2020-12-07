@@ -88,7 +88,7 @@ public class SearchRoom extends JFrame {
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String SQL = "select * from room where bed_type = '" + c1.getSelectedItem() + "'";
-				String SQL2 = "select * from room where availability = 'Available' AND bed_type = '"
+				String SQL2 = "select * from room where available = 'Available' AND bed_type = '"
 						+ c1.getSelectedItem() + "'";
 				try {
 					conn c = new conn();

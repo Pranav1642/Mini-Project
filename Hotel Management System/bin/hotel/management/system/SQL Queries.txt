@@ -1,13 +1,13 @@
 create database hms;
 
-create table login(username varchar(30) not null, password varchar(30));
+create table login(username varchar(30) primary key, password varchar(30));
 
 insert into login values ('admin','12345');
 
 
 create table employee(name varchar(30) not null, age varchar (30) not null, gender varchar(15) not null, job varchar(30) not null, salary varchar(20) not null, phone varchar(15) not null, aadhar varchar(15) not null, email varchar(30) not null);
 
-create table room(room_number varchar(10) not null, available varchar(20) not null, status varchar(20) not null, price varchar(20) not null, bed_type varchar(20) not null);
+create table room(room_number varchar(10) primary key, available varchar(20) not null, status varchar(20) not null, price varchar(20) not null, bed_type varchar(20) not null);
 
 create table driver(name varchar(30) not null, age varchar(30) not null, gender varchar(15) not null, company varchar(20) not null, brand varchar(20) not null, available varchar(20) not null, location varchar(40) not null);
 

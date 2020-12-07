@@ -125,6 +125,7 @@ public class AddRoom extends JFrame implements ActionListener {
 
 				} catch (Exception ee) {
 					System.out.println(ee);
+					JOptionPane.showMessageDialog(null, "Same Room cannot be used again");
 				}
 			} else if (ae.getSource() == b2) {
 				this.setVisible(false);
