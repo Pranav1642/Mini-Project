@@ -44,7 +44,7 @@ public class UpdateCheck extends JFrame {
 	public UpdateCheck() throws SQLException {
 		// conn = Javaconnect.getDBConnection();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(500, 200, 950, 500);
+		setBounds(350, 150, 950, 500);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

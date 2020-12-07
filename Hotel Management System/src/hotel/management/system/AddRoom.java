@@ -20,7 +20,7 @@ public class AddRoom extends JFrame implements ActionListener {
 	}
 
 	public AddRoom() {
-		setBounds(450, 200, 1000, 450);
+		setBounds(350, 150, 1000, 450);
 		contentPane = new JPanel();
 		setContentPane(contentPane);
 		contentPane.setLayout(null);

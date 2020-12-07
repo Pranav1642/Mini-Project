@@ -42,7 +42,7 @@ public class UpdateRoom extends JFrame {
 	public UpdateRoom() throws SQLException {
 		// conn = Javaconnect.getDBConnection();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(530, 200, 1000, 450);
+		setBounds(350, 150, 1000, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

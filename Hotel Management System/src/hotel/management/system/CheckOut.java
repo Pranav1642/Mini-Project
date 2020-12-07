@@ -41,7 +41,7 @@ public class CheckOut extends JFrame {
 	public CheckOut() throws SQLException {
 		// conn = Javaconnect.getDBConnection();//
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(530, 200, 800, 294);
+		setBounds(350, 150, 800, 294);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

@@ -41,7 +41,7 @@ public class Department extends JFrame {
 	public Department() throws SQLException {
 		// conn = Javaconnect.getDBConnection();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(600, 200, 700, 500);
+		setBounds(350, 150, 700, 500);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

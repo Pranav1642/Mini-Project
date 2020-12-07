@@ -164,7 +164,7 @@ public class AddEmployee extends JFrame { // Third Frame
 
 		setSize(900, 600);
 		setVisible(true);
-		setLocation(200, 100);
+		setLocation(350, 150);
 
 	}
 
