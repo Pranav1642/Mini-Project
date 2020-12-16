@@ -134,7 +134,7 @@ public class UpdateRoom extends JFrame {
 
 				try {
 					conn c = new conn();
-					String str = "update room set clean_status = '" + txt_Status.getText() + "' where room_number = "
+					String str = "update room set status = '" + txt_Status.getText() + "' where room_number = "
 							+ txt_Room.getText();
 					c.s.executeUpdate(str);
 					JOptionPane.showMessageDialog(null, "Update Sucessful");

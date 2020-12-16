@@ -27,17 +27,17 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
 		ImageIcon i2 = new ImageIcon(i3);
 		l1 = new JLabel(i2);
 		
-		Icon imgIcon = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/anime.gif"));
-		JLabel label = new JLabel(imgIcon);
-		//label.setSize(1000,60);
-		label.setBounds(0,10,800,60);
-		this.getContentPane().add(label);
-				
-//		JLabel lid = new JLabel("HOTEL MANAGEMENT SYSTEM");
-//		lid.setBounds(30, 400, 1500, 100);
-//		lid.setFont(new Font("serif", Font.BOLD, 50));
-//		lid.setForeground(Color.white);
-//		l1.add(lid);
+//		Icon imgIcon = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/anime.gif"));
+//		JLabel label = new JLabel(imgIcon);
+//		//label.setSize(1000,60);
+//		label.setBounds(0,10,800,60);
+//		this.getContentPane().add(label);
+//				
+		JLabel lid = new JLabel("HOTEL MANAGEMENT SYSTEM");
+		lid.setBounds(30, 10, 1500, 100);
+		lid.setFont(new Font("serif", Font.BOLD, 50));
+		lid.setForeground(Color.white);
+		l1.add(lid);
 
 		b1.setBounds(1025, 395, 150, 50);
 		l1.setBounds(0, 0, 1366, 565);
@@ -48,18 +48,18 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
 		b1.addActionListener(this);
 		setVisible(true);
 
-//		while (true) {
-//			lid.setVisible(false); // lid = j label
-//			try {
-//				Thread.sleep(500); // 1000 = 1 second
-//			} catch (Exception e) {
-//			}
-//			lid.setVisible(true);
-//			try {
-//				Thread.sleep(500);
-//			} catch (Exception e) {
-//			}
-//		}
+		while (true) {
+			lid.setVisible(false); // lid = j label
+			try {
+				Thread.sleep(500); // 1000 = 1 second
+			} catch (Exception e) {
+			}
+			lid.setVisible(true);
+			try {
+				Thread.sleep(500);
+			} catch (Exception e) {
+			}
+		}
 	}
 
 	public void actionPerformed(ActionEvent ae) {
